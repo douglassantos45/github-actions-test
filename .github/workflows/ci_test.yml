@@ -1,0 +1,19 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Testando o github Actions
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "dev" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 16
+      - name: Run a multi-line script
+      - run: npm cli
+      - run: npm run test
